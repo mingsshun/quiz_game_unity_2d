@@ -13,3 +13,10 @@ MonoBehaviour:
   m_Name: Question 5
   m_EditorClassIdentifier: 
   question: What is the variable?
+  answers:
+  - 
+  - 
+  - 
+  - 
+  - 
+  correctAnswerIndex: 0
