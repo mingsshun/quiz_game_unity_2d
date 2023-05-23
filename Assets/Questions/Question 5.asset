@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45498f7ff3eb42240821acd4eed71387, type: 3}
   m_Name: Question 5
   m_EditorClassIdentifier: 
-  question: What is the variable?
+  question: '"I like watching comedy." The word "comedy" means:'
   answers:
-  - 
-  - 
-  - 
-  - 
-  - 
-  correctAnswerIndex: 0
+  - a film giving facts about something
+  - a film made by photographing a series of changing drawings
+  - a play for the theater and television
+  - a film or a play that is funny and usually has a happy ending
+  correctAnswerIndex: 3

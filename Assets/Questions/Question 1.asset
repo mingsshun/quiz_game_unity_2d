@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45498f7ff3eb42240821acd4eed71387, type: 3}
   m_Name: Question 1
   m_EditorClassIdentifier: 
-  question: how many people are there in your family?
+  question: Can you tell me who is responsible ____ checking passport?
   answers:
-  - a lot of
-  - 1
-  - 22
-  - 4
-  correctAnswerIndex: 0
+  - to
+  - in
+  - about
+  - for
+  correctAnswerIndex: 3
