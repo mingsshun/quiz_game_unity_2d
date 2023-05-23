@@ -627,7 +627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &698500183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,6 +835,7 @@ MonoBehaviour:
   - {fileID: 1811573661}
   defaultAnswerSprite: {fileID: 21300000, guid: 3ba1f678e0e833e49849c3cf7e706e3b, type: 3}
   correctAnswerSprite: {fileID: 21300000, guid: 18a6a3dbe84025b40b2028f2d0a26a22, type: 3}
+  timerImage: {fileID: 2012601851}
 --- !u!1001 &1397075001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -958,6 +959,53 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5274074128285230634, guid: f7782452b4601fb468a743a237578bf2, type: 3}
   m_PrefabInstance: {fileID: 1397075001}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1406246844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1406246846}
+  - component: {fileID: 1406246845}
+  m_Layer: 0
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1406246845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406246844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee14f3cbf63c20468c89d50ab9d4d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToCompleteQuestion: 30
+  timeToShowCorrectAnswer: 10
+  fillFraction: 0
+--- !u!4 &1406246846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406246844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1421.9696, y: 785.33923, z: -5.758889}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1408287500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,13 +1687,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 74bb035ee7c926b4a829bad8bf10928a, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillAmount: 0.927
+  m_FillClockwise: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &2012601852
