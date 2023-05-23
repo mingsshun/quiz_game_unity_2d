@@ -827,7 +827,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionText: {fileID: 67391563}
-  question: {fileID: 11400000, guid: 26b02be3436d3434686d030a8f75797a, type: 2}
+  questions:
+  - {fileID: 11400000, guid: 26b02be3436d3434686d030a8f75797a, type: 2}
+  - {fileID: 11400000, guid: 080d7abb4e49dc74facd996b11a81f42, type: 2}
+  - {fileID: 11400000, guid: 5aa91e3e0edefbe43a17b09d9531057d, type: 2}
+  - {fileID: 11400000, guid: 5419a00e2a7e6534c9500569ace466e3, type: 2}
+  - {fileID: 11400000, guid: 8c4b3b13df60a274bbf6d27dcdf88162, type: 2}
   answerButtons:
   - {fileID: 1930398273}
   - {fileID: 251129963}
@@ -990,7 +995,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToCompleteQuestion: 30
   timeToShowCorrectAnswer: 10
+  loadNextQuestion: 0
   fillFraction: 0
+  isAnsweringQuestion: 0
 --- !u!4 &1406246846
 Transform:
   m_ObjectHideFlags: 0
@@ -1616,6 +1623,58 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3ba1f678e0e833e49849c3cf7e706e3b, type: 3}
+    - target: {fileID: 5274074128379460068, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_text
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_lineSpacing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_overflowMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: checkPaddingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_enableExtraPadding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274074128379460069, guid: f7782452b4601fb468a743a237578bf2, type: 3}
+      propertyPath: m_IsTextObjectScaleStatic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7782452b4601fb468a743a237578bf2, type: 3}
 --- !u!224 &1930398272 stripped
