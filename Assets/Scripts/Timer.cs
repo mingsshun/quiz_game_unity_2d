@@ -44,7 +44,7 @@ public class Timer : MonoBehaviour
             {
                 fillFraction = timerValue/timeToShowCorrectAnswer;
             }
-            if(timerValue <= 0)
+            else
             {
                 isAnsweringQuestion = true;
                 timerValue = timeToCompleteQuestion;

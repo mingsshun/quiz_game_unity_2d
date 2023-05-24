@@ -25,12 +25,22 @@ public class Quiz : MonoBehaviour
     [Header("Timer")]
     [SerializeField] Image timerImage;
     Timer timer;
+
+    [Header("Scoring")]
+    [SerializeField] TextMeshProUGUI scoreText;
+    ScoreKeeper scoreKeeper;
+
+    [Header("Progress Bar")]
+    [SerializeField] Slider progressBar;
+
+    public bool isComplete;
     // Start is called before the first frame update
     void Start()
     {
         timer = FindObjectOfType<Timer>();
-        // GetNextQuestion();
-        // DisplayQuestion();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        progressBar.maxValue = questions.Count;
+        progressBar.value = 0;
     }
 
     void Update()
@@ -44,7 +54,7 @@ public class Quiz : MonoBehaviour
         }
         else if(!hasAnsweredEarly && !timer.isAnsweringQuestion)
         {
-            DisplayAnswer(-1);
+            // DisplayAnswer(-1);
             SetButtonState(false);
         }
     }
@@ -55,16 +65,24 @@ public class Quiz : MonoBehaviour
         DisplayAnswer(index);
         SetButtonState(false);
         timer.CancelTimer();
+        scoreText.text = "Score: " + scoreKeeper.CalculateScore() + "%";
+
+        if(progressBar.value == progressBar.maxValue)
+        {
+            isComplete = true;
+        }
     }
 
     private void DisplayAnswer(int index)
     {
         Image buttonImage;
+        currentQuestion.GetCorrectAnswerIndex();
         if (index == currentQuestion.GetCorrectAnswerIndex())
         {
             questionText.text = "Correct!!!!!";
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
+            scoreKeeper.IncrementCorrectAnswers();
         }
         else
         {
@@ -85,10 +103,12 @@ public class Quiz : MonoBehaviour
             SetDefaultButtonSprites();
             GetRandomQuestion();
             DisplayQuestion();
+            progressBar.value++;
+            scoreKeeper.IncrementQuestionsSeen();
         }
     }
 
-    private void GetRandomQuestion()
+    void GetRandomQuestion()
     {
         int index = Random.Range(0, questions.Count);
         currentQuestion = questions[index];
@@ -97,7 +117,7 @@ public class Quiz : MonoBehaviour
         }
     }
 
-    private void DisplayQuestion()
+    void DisplayQuestion()
     {
         questionText.text = currentQuestion.GetQuestion();
         for (int i = 0; i < answerButtons.Length; i++)
